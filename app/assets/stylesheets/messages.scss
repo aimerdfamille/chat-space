@@ -1,5 +1,8 @@
 $white: #FFFFFF;
 $blue: #38AEF0;
+$blue-dark: #2f3e51;
+$message-black: #434A54;
+$form-gray: #B8C3C7;
 
 .contents {
 	width: 100%;
@@ -41,7 +44,7 @@ $blue: #38AEF0;
 			}
 		}
 		.groups {
-			background-color: #2f3e51;
+			background-color: $blue-dark;
 			height: calc(100vh - 15%);
 			padding: 0 20px;
 			.group {
@@ -99,7 +102,7 @@ $blue: #38AEF0;
 				.top-message {
 					display: flex;
 					&__user-name {
-						color: #434A54;
+						color: $message-black;
 						font-size: 16px;
 						font-weight: bold;
 					}
@@ -111,7 +114,7 @@ $blue: #38AEF0;
 				.bottom-message {
 					margin-top: 10px;
 					&__body {
-						color: #434A54;
+						color: $message-black;
 						font-size: 14px;
 						margin-bottom: 40px;
 					}
@@ -125,10 +128,10 @@ $blue: #38AEF0;
   		right: 0;
   		left: 0;
 			height: 90px;
-			background-color: #B8C3C7;
+			background-color: $form-gray;
 			margin-left: 300px;
 			padding: 0 40px 0 40px;
-				&__aaa {
+				&__message-div {
 					position: relative;
 					&__message {
 						height: 50px;
