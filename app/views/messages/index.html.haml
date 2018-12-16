@@ -2,23 +2,59 @@
   .left-content
     .header
       .header__name
+        ユーザー名
       .header__icon
-        .headerz__icon__new-group
+        .header__icon__new-group
+          = link_to do
+            = fa_icon "pencil-square-o"
         .header__icon__edit-user
+          = link_to do
+            = fa_icon "cog"
     .groups
       .group
         .group__name
+          グループ名
         .group__message
+          メッセージ
+      .group
+        .group__name
+          グループ名
+        .group__message
+          メッセージ
   .right-content
     .header
       .left-header
         .left-header__name
+          グループ名
         .left-header__members
+          Member:
+          .member
+            メンバー名
       .right-header
-    .message
-    .message
-    .message
+        Edit
+    .messages
+      .message
+        .top-message
+          .top-message__user-name
+            メンバー
+          .top-message__time
+            1111/11/11
+        .bottom-message
+          .bottom-message__body
+            メッセージ
+      .message
+        .top-message
+          .top-message__user-name
+            メンバー
+          .top-message__time
+            1111/11/11
+        .bottom-message
+          .bottom-message__body
+            メッセージ
     .form
-      .form__message
-      .form__submit
-
+      %form
+        %input.form__message
+          %label.form__image
+            = fa_icon 'picture-o'
+            %input{type: 'file', style: 'display:none'}
+        %input.form__submit{type: 'submit', value: 'send'}
