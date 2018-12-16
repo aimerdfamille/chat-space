@@ -40,9 +40,14 @@ $blue: #38AEF0;
 				float: right;
 				&__new-group {
 					display: inline-block;
+					.icon {
+						color: $white;
+					}
 				}
 				&__edit-user {
 					display: inline-block;
+					.icon {
+						color: $white;
 					}
 				}
 			}
@@ -135,15 +140,20 @@ $blue: #38AEF0;
 			background-color: #B8C3C7;
 			margin-left: 300px;
 			padding: 0 40px 0 40px;
-				&__message {
-					margin: 20px 0 20px 0;
-					height: 50px;
-					width: calc(100% - 150px);
-					float: left;
-					border: none;
-				}
-				&__image {
-					line-height: 100px;
+				&__aaa {
+					position: relative;
+					&__message {
+						height: 50px;
+						width: calc(100% - 150px);
+						margin: 20px 0 20px 0;
+						float: left;
+						border: none;
+					}
+					&__image {
+						position: absolute;
+						left: calc(100% - 180px);
+						line-height: 100px;
+					}
 				}
 				&__submit {
 					background-color: $blue;
