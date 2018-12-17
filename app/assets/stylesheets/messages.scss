@@ -3,59 +3,6 @@
 	width: 100%;
 	height: 100%;
 
-	.left-content {
-		float: left;
-		box-sizing: border-box;
-		color: $white;
-		height: 100vh;
-		width: 300px;
-		.header {
-			box-sizing: border-box;
-			background-color: #253141;
-			height: 15%;
-			width: 100%;
-			line-height: 100px;
-			color: $white;
-			padding: 0 20px;
-			&__name {
-				font-size: 16px;
-				display: inline-block;
-				font-weight: bold;
-			}
-			&__icon {
-				float: right;
-				&__new-group {
-					display: inline-block;
-					.icon {
-						color: $white;
-					}
-				}
-				&__edit-user {
-					display: inline-block;
-					.icon {
-						color: $white;
-					}
-				}
-			}
-		}
-		.groups {
-			background-color: $blue-dark;
-			height: calc(100vh - 15%);
-			padding: 0 20px;
-			.group {
-				box-sizing: border-box;
-				padding: 20px 0 40px;
-				&__name {
-					font-size: 15px;
-				}
-				&__message {
-					font-size: 11px;
-					margin-top: 5px;
-				}
-			}
-		}
-	}
-
 	.right-content {
 		float: right;
 		width: calc(100% - 300px);
@@ -79,7 +26,7 @@
 				}
 			}
 			.right-header {
-				color: $blue;
+				color: $light_blue;
 				float: right;
 				border: 1px solid;
 				height: 40px;
@@ -97,7 +44,7 @@
 				.top-message {
 					display: flex;
 					&__user-name {
-						color: $message-black;
+						color: $black;
 						font-size: 16px;
 						font-weight: bold;
 					}
@@ -109,7 +56,7 @@
 				.bottom-message {
 					margin-top: 10px;
 					&__body {
-						color: $message-black;
+						color: $black;
 						font-size: 14px;
 						margin-bottom: 40px;
 					}
@@ -119,9 +66,9 @@
 
 		.form {
 			position: absolute;
-  		bottom: 0;
-  		right: 0;
-  		left: 0;
+  			bottom: 0;
+  			right: 0;
+  			left: 0;
 			height: 90px;
 			background-color: $form-gray;
 			margin-left: 300px;
@@ -142,7 +89,7 @@
 					}
 				}
 				&__submit {
-					background-color: $blue;
+					background-color: $light_blue;
 					color: $white;
 					border: none;
 					float: right;
