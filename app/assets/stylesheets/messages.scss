@@ -66,39 +66,40 @@
 
 		.form {
 			position: absolute;
-  			bottom: 0;
-  			right: 0;
-  			left: 0;
+  		bottom: 0;
+  		right: 0;
+  		left: 0;
 			height: 90px;
 			background-color: $form-gray;
 			margin-left: 300px;
 			padding: 0 40px 0 40px;
-				&__chat {
-					position: relative;
-					&__message {
-						height: 50px;
-						width: calc(100% - 150px);
-						margin: 20px 0 20px 0;
-						float: left;
-						border: none;
-					}
-					&__image {
-						position: absolute;
-						left: calc(100% - 180px);
-						line-height: 100px;
-					}
-				}
-				&__submit {
-					background-color: $light_blue;
-					color: $white;
-					border: none;
-					float: right;
+			&__chat {
+				position: relative;
+				&__message {
+					display: block;
 					height: 50px;
-					width: 100px;
-					font-size: 16px;
-					margin-left: 15px;
+					width: calc(100% - 150px);
 					margin: 20px 0 20px 0;
+					float: left;
+					border: none;
 				}
+				&__image {
+					position: absolute;
+					left: calc(100% - 180px);
+					line-height: 100px;
+				}
+			}
+			&__submit {
+				background-color: $light_blue;
+				color: $white;
+				border: none;
+				float: right;
+				height: 50px;
+				width: 100px;
+				font-size: 16px;
+				margin-left: 15px;
+				margin: 20px 0 20px 0;
+			}
 		}
 	}
 }
