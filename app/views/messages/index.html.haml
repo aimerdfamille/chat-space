@@ -14,29 +14,16 @@
         = link_to "Edit", edit_group_path(@group)
 
     .messages
-      .message
-        .top-message
-          .top-message__user-name
-            メンバー
-          .top-message__time
-            1111/11/11
-        .bottom-message
-          .bottom-message__body
-            メッセージ
-      .message
-        .top-message
-          .top-message__user-name
-            メンバー
-          .top-message__time
-            1111/11/11
-        .bottom-message
-          .bottom-message__body
-            メッセージ
+      = render @messages
+
     .form
-      %form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__chat__message', placeholder: 'type a message'
         .form__chat
-          %input.form__chat__message
-            %label.form__chat__image
-              = fa_icon 'picture-o'
-              %input{type: 'file', style: 'display:none'}
-        %input.form__submit{type: 'submit', value: 'send'}
+          = f.label :image, class: 'form__chat__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden', style: 'display:none'
+        = f.submit 'Send', class: 'form__submit'
+
+
+
