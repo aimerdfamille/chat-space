@@ -1,6 +1,5 @@
 $(function(){
 	function buildHTML(message){
-		console.log(message.image.url)
 		var image = ""
 		// 画像があれば変数imageにimgタグを挿入
 		if (message.image.url != null) {
