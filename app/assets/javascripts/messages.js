@@ -39,11 +39,10 @@ $(function(){
 	  })
 	  .done(function(data){
 	    var html = buildHTML(data);
-	    $('.messages').append(html);
-    	$('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast'
-    		);
-	    $('.form__chat__message').val('');
-	    $('.hidden').val('');
+      $('.messages').append(html);
+      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+      $('.form__chat__message').val('');
+      $('.hidden').val('');
 	  })
 	  .fail(function(){
       alert('error');
