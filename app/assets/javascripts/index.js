@@ -47,4 +47,5 @@ $(function() {
   $('#chat-group-users').on('click','.js-remove-btn', function() {
     $(this).parent().empty()
   });
+
 });
