@@ -24,7 +24,7 @@
     .chat-group-form__field--right
       #chat-group-users
         .chat-group-user.clearfix
-          = hidden_field_tag :user_ids, current_user.id, name: "chat_group[user_ids][]"
+          = hidden_field_tag :user_ids, current_user.id, name: "group[user_ids][]"
           %p.chat-group-user__name
             = current_user.name
 
