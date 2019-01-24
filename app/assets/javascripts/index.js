@@ -18,22 +18,35 @@ $(function() {
 
   $('#user-search-field').on('keyup', function() {
     var input = $('#user-search-field').val();
-    $.ajax({
-      type: 'GET',
-      url: '/users',
-      data: { keyword: input },
-      dataType: 'json'
-    })
-    .done(function(users) {
-      $('#user-search-result').empty();
-      users.forEach(function(user){
-        var html = appendUser(user);
-        $('#user-search-result').append(html);
-      });
-   	})
-    .fail(function(){
-      alert('ユーザーの検索に失敗しました');
-    })
+    if(input.length > 0){
+      $.ajax({
+        type: 'GET',
+        url: '/users',
+        data: { keyword: input },
+        dataType: 'json'
+      })
+      .done(function(users) {
+        $('#user-search-result').empty();
+        users.forEach(function(user){
+          var html = appendUser(user);
+          $('#user-search-result').append(html);
+        });
+     	})
+      .fail(function(){
+        alert('ユーザーの検索に失敗しました');
+      })
+    }
+    else{
+      $.ajax({
+        type: 'GET',
+        url: '/users',
+        data: { keyword: input },
+        dataType: 'json'
+      })
+      .done(function(users) {
+        $('#user-search-result').empty();
+      })
+    }
   });
 
   $('#user-search-result').on('click','.chat-group-user__btn--add', function() {
