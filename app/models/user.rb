@@ -8,4 +8,8 @@ class User < ApplicationRecord
   has_many :group_users
   has_many :groups, through: :group_users
   has_many :messages
+
+  def self.search_for_group(params, current)
+  	where('name LIKE(?)', "%#{params[:keyword]}%").where.not(id: current)
+  end
 end
